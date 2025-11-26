@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoKids — Jeu de tri</title>
+  <!-- Lien vers le fichier CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="mascot">🐼</div>
+      <div>
+        <h1>EcoKids — Jeu de tri</h1>
+        <p class="lead">Glisse les déchets dans la bonne poubelle. Apprends en t'amusant !</p>
+      </div>
+      <div class="hud">
+        <div class="score" id="score">Score: 0</div>
+        <div class="progress">
+          <i id="progbar"></i>
+        </div>
+      </div>
+    </header>
+
+    <div class="controls">
+      <button class="primary" id="startBtn">⏯️ Démarrer / Nouveau</button>
+      <button class="ghost" id="hintBtn">💡 Astuce</button>
+      <button class="ghost" id="resetBtn">♻️ Réinitialiser</button>
+    </div>
+
+    <main class="game">
+      <section class="play-area">
+        <div class="trash-row" id="trashRow"></div>
+
+        <div id="message">
+          <div>
+            <h2 id="msgTitle">Bravo !</h2>
+            <p id="msgText">Tu as trié correctement.</p>
+            <button class="primary" id="msgClose">Continuer</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="bins">
+        <div class="bin yellow" data-accept="plastic" id="binPlastic">Poubelle jaune — Plastique</div>
+        <div class="bin blue" data-accept="glass" id="binGlass">Poubelle bleue — Verre</div>
+        <div class="bin green" data-accept="compost" id="binCompost">Compost — Organique</div>
+        <div class="bin brown" data-accept="paper" id="binPaper">Poubelle marron — Papier</div>
+
+        <div class="badge" id="badgeArea">Badges: —</div>
+      </aside>
+    </main>
+
+    <footer>
+      <small>Conseil : joue 5 minutes par jour et gagne des badges 🌍</small>
+      <div>
+        <button class="ghost" id="learnBtn">📚 Apprendre</button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Lien vers le fichier JS -->
+  <script src="script.js"></script>
+</body>
+</html>
